@@ -55,8 +55,8 @@ library
     , bytestring
     , conduit
     , conduit-extra
-    , data-default-class
-    , data-msgpack      >= 0.0.4
+    , data-default-class >= 0.1.2
+    , data-msgpack >= 0.0.8
     , exceptions
     , monad-control
     , mtl
