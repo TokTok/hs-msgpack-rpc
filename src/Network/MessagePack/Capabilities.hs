@@ -1,8 +1,9 @@
 {-# LANGUAGE DeriveGeneric #-}
 module Network.MessagePack.Capabilities where
 
-import           Data.MessagePack (MessagePack)
-import           GHC.Generics     (Generic)
+import           Data.Default.Class
+import           Data.MessagePack   (MessagePack)
+import           GHC.Generics       (Generic)
 
 
 data ServerCapability
@@ -14,6 +15,7 @@ data ServerCapability
   deriving (Eq, Read, Show, Generic)
 
 instance MessagePack ServerCapability
+instance Default ServerCapability
 
 
 data ClientCapability
@@ -23,5 +25,4 @@ data ClientCapability
   deriving (Eq, Read, Show, Generic)
 
 instance MessagePack ClientCapability
-
-
+instance Default ClientCapability
